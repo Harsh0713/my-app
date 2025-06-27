@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './Navbar';
 
 function App() {
+    //Two ways of using the REACT APP
+    //Functional Based : React Hooks(imp)
+    //Class Based Components
+    // let greet = <b>Good Morning</b>;
+
+    //Props: properties
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>
+    <Navbar title="Amazon" link="Links"/>
+
+    </>
   );
 }
 
