@@ -1,6 +1,7 @@
 
 import './App.css';
 import Navbar from './Navbar';
+import TextForm from './TextForm';
 
 function App() {
     //Two ways of using the REACT APP
@@ -13,6 +14,7 @@ function App() {
     
     <>
     <Navbar title="Amazon" link="Links"/>
+    <TextForm heading="Enter the text to modify"/>
 
     </>
   );
