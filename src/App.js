@@ -1,4 +1,5 @@
 
+import Alert from './Alert';
 import './App.css';
 import Navbar from './Navbar';
 import TextForm from './TextForm';
@@ -11,13 +12,30 @@ function App() {
     //Class Based Components
     // let greet = <b>Good Morning</b>;
     const [mode, setMode] = useState('light');
+    const [alert, setAlert]= useState(null);
+
+    const showAlert=(message,type)=>{
+      setAlert({
+        msg: message,
+        type: type,
+      })
+
+      setTimeout(()=>{
+        setAlert(null);
+      },2000)
+    }
+
+
+
   const toggleMode=()=>{
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor='grey';
+      showAlert("Dark mode turned on", "success")
     }else{
       setMode('light');
       document.body.style.backgroundColor='white';
+      showAlert("Light mode turned on", "success")
     }
   }
 
@@ -26,9 +44,10 @@ function App() {
     
     <>
     <Navbar title="Amazon" link="Links" mode={mode} toggleMode={toggleMode}/>
+    <Alert alert={alert}/>
    
     
-     <TextForm heading="Enter the text to modify" mode={mode}/>
+     <TextForm showAlert={showAlert} heading="Enter the text to modify" mode={mode} />
      {/* <About/> */}
 
     </>

@@ -9,6 +9,7 @@ export default function TextForm(props) {
         console.log("Upper case was clicked"+text)
         let newText=text.toUpperCase()
         setText(newText);
+        props.showAlert("Converted to Upper Case", "success")
         // setText("You clicked on handleupClick")
     }
 
@@ -16,6 +17,7 @@ export default function TextForm(props) {
         // console.log("Upper case was clicked"+text)
         let newText=text.toLowerCase()
         setText(newText);
+        props.showAlert("Converted to Lower Case", "warning")
         // setText("You clicked on handleupClick")
     }
 
@@ -31,6 +33,7 @@ export default function TextForm(props) {
 
     const handleDelete=()=>{
       setText("");
+      props.showAlert("Deleted the content", "danger")
     }
   return (
     <>
