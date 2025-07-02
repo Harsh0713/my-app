@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
 import About from './About';
+import { Link } from 'react-router-dom';
 
 // import React from 'react'
 
@@ -20,7 +21,7 @@ export default function Navbar(props) {
           <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">{props.link}</a>
+          <Link className="nav-link" to='/About'>About</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
