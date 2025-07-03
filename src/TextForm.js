@@ -46,14 +46,20 @@ export default function TextForm(props) {
    style={{backgroundColor: props.mode==='dark' ? 'grey' : 'white', color: props.mode==='dark' ? 'white' : 'black'}}></textarea>
 </div>
 
-    <button className="btn btn-primary mx-4" onClick={handleUpClick}>UpperCase</button>
-    <button className="btn btn-primary mx-4 " onClick={handleDownClick}>LowerCase</button>
+    <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}>UpperCase</button>
+    <button className="btn btn-primary mx-3 my-3 " onClick={handleDownClick}>LowerCase</button>
     <button type="button" className="btn btn-secondary mx-4" onClick={handleDelete}>Delete Content</button>
     
     </div>
     <div className='container my-4' style={{color: props.mode==='dark' ? 'white' : 'black'}}>
       <h1>Your text summary</h1>
-      <p>{text.split(" ").length} Words and {text.length} charecters</p>
+      <p>{text.split(" ").filter((element) => {
+        return element.length!=0;
+
+      }).length
+      }{" "} 
+      Words and {text.length} characters
+      </p>
       <p>{0.008*text.split(" ").length} Minutes read </p>
     
     <h2>Preview</h2>

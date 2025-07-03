@@ -54,6 +54,7 @@ function App() {
      <Route exact path='/' element={ 
       <>
       <Navbar title="Amazon" link="Links" mode={mode} toggleMode={toggleMode}/>
+      <Alert alert={alert}/>
        <TextForm showAlert={showAlert} heading="Enter the text to modify" mode={mode} />
    
       
@@ -65,7 +66,7 @@ function App() {
 
         <>
         <Navbar title="Amazon" link="Links" mode={mode} toggleMode={toggleMode}/>
-        <About/> 
+        <About mode={mode}/> 
         </>
         }/>
      
@@ -80,7 +81,7 @@ function App() {
     
      {/* <TextForm showAlert={showAlert} heading="Enter the text to modify" mode={mode} /> */} 
      {/* <About/> */}
-      <Alert alert={alert}/>
+      
 
     </>
   );
