@@ -32,11 +32,13 @@ function App() {
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor='grey';
-      showAlert("Dark mode turned on", "success")
+      showAlert("Dark mode turned on", "success");
+      document.title='Dark Mode'
     }else{
       setMode('light');
       document.body.style.backgroundColor='white';
-      showAlert("Light mode turned on", "success")
+      showAlert("Light mode turned on", "success");
+      document.title='Light Mode'
     }
   }
 
@@ -55,7 +57,7 @@ function App() {
       <>
       <Navbar title="Amazon" link="Links" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
-       <TextForm showAlert={showAlert} heading="Enter the text to modify" mode={mode} />
+       <TextForm showAlert={showAlert} heading="Desi QnA - Word Counter Character Counter" mode={mode} />
    
       
       
