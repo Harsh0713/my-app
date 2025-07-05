@@ -55,7 +55,9 @@ export default function TextForm(props) {
     
     </div>
     <div className='container my-4' style={{color: props.mode==='dark' ? 'white' : 'black'}}>
-      <h1>Your text summary</h1>
+      <h1>
+        Your text summary
+        </h1>
       <p>{text.split(" ").filter((element) => {
         return element.length!==0;
 
@@ -70,7 +72,9 @@ export default function TextForm(props) {
        Minutes read 
        </p>
     
-    <h2>Preview</h2>
+    <h2>
+      Information
+      </h2>
     <p>{text.length>0 ? text: "Nothing to preview!"}</p>
     </div>
     </>

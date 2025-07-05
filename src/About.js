@@ -47,7 +47,7 @@ export default function About(props) {
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={myStyle}>
-        Analize your text
+        Analyze your text
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample" style={myStyle}>
@@ -59,7 +59,7 @@ export default function About(props) {
   <div className="accordion-item">
     <h2 className="accordion-header">
       <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" style={myStyle} aria-expanded="false" aria-controls="collapseTwo">
-        You dont have to pay
+        You don't have to pay
       </button>
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample" style={myStyle}>
